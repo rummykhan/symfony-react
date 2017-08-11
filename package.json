@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "cross-env NODE_ENV=development ./node_modules/.bin/webpack -d --watch"
+    "watch": "cross-env NODE_ENV=development ./node_modules/.bin/webpack -d --watch",
+    "production": "cross-env NODE_ENV=production ./node_modules/.bin/webpack -p"
   },
   "author": "",
   "license": "ISC",
