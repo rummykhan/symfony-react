@@ -1,4 +1,15 @@
-tradetracker
-============
+Symfony React Boilerplate
+--
 
-A Symfony project created on August 11, 2017, 4:25 pm.
+Clone this repo
+
+1. Composer install
+2. npm install
+3. php bin/console server:run
+4. npm run watch
+
+#### Contact
+
+[rehan_manzoor@outlook.com](mailto://rehan_manzoor@outlook.com)
+
+
