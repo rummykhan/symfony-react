@@ -1,5 +1,12 @@
-Symfony React Boilerplate
+Symfony & React Boilerplate
 --
+
+#### Features
+* Symfony - v3
+* React JS - v15
+* React Router - v4
+* Webpack 2 with `babel-loader`
+* Http Basic Auth Enabled
 
 #### Clone this repository using
 
