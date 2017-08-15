@@ -1,7 +1,7 @@
 Symfony & React Boilerplate
 --
 
-#### Features
+#### What's in it?
 * Symfony - v3
 * React JS - v15
 * React Router - v4
@@ -19,7 +19,7 @@ git clone https://github.com/rummykhan/symfony-react.git
 1. `composer install`
 2. `npm install`
 3. `php bin/console server:run`
-4. `npm run watch` or `npm run production`
+4. `npm run watch-poll` or `npm run production`
 
 #### Contact
 
