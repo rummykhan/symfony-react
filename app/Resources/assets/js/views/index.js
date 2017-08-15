@@ -1,8 +1,7 @@
 import Home from './Home';
-import Tmp from './Tmp';
+import Layout from './Layout';
 
-
-export default {
+export {
     Home,
-    Tmp
+    Layout
 }

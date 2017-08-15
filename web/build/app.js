@@ -11547,7 +11547,7 @@ Link.contextTypes = {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(98);
-module.exports = __webpack_require__(237);
+module.exports = __webpack_require__(236);
 
 
 /***/ }),
@@ -11574,7 +11574,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * includes React and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-__webpack_require__(231);
+__webpack_require__(230);
 
 /**
  * Next, we will create a fresh React application instance and attach it to
@@ -23666,8 +23666,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
@@ -23680,46 +23678,19 @@ var _history2 = _interopRequireDefault(_history);
 
 var _index = __webpack_require__(226);
 
-var _Layout = __webpack_require__(229);
-
-var _Layout2 = _interopRequireDefault(_Layout);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Routes = function (_Component) {
-    _inherits(Routes, _Component);
-
-    function Routes(props) {
-        _classCallCheck(this, Routes);
-
-        return _possibleConstructorReturn(this, (Routes.__proto__ || Object.getPrototypeOf(Routes)).call(this, props));
-    }
-
-    _createClass(Routes, [{
-        key: 'render',
-        value: function render() {
-
-            return _react2.default.createElement(
-                _reactRouterDom.BrowserRouter,
-                { history: _history2.default },
-                _react2.default.createElement(
-                    _Layout2.default,
-                    null,
-                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _index.Home }),
-                    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/tmp', component: _index.Tmp })
-                )
-            );
-        }
-    }]);
-
-    return Routes;
-}(_react.Component);
+var Routes = function Routes() {
+    return _react2.default.createElement(
+        _reactRouterDom.BrowserRouter,
+        { history: _history2.default },
+        _react2.default.createElement(
+            _index.Layout,
+            null,
+            _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _index.Home })
+        )
+    );
+};
 
 exports.default = Routes;
 
@@ -25694,21 +25665,20 @@ exports.default = (0, _createBrowserHistory2.default)({});
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.Layout = exports.Home = undefined;
 
 var _Home = __webpack_require__(227);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Tmp = __webpack_require__(228);
+var _Layout = __webpack_require__(228);
 
-var _Tmp2 = _interopRequireDefault(_Tmp);
+var _Layout2 = _interopRequireDefault(_Layout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = {
-    Home: _Home2.default,
-    Tmp: _Tmp2.default
-};
+exports.Home = _Home2.default;
+exports.Layout = _Layout2.default;
 
 /***/ }),
 /* 227 */
@@ -25747,9 +25717,6 @@ var Home = function (_Component) {
     _createClass(Home, [{
         key: 'render',
         value: function render() {
-
-            console.log('Home Component');
-
             return _react2.default.createElement(
                 'h1',
                 null,
@@ -25780,57 +25747,7 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Tmp = function (_Component) {
-    _inherits(Tmp, _Component);
-
-    function Tmp() {
-        _classCallCheck(this, Tmp);
-
-        return _possibleConstructorReturn(this, (Tmp.__proto__ || Object.getPrototypeOf(Tmp)).apply(this, arguments));
-    }
-
-    _createClass(Tmp, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'h1',
-                null,
-                'Tmp Component'
-            );
-        }
-    }]);
-
-    return Tmp;
-}(_react.Component);
-
-exports.default = Tmp;
-
-/***/ }),
-/* 229 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Header = __webpack_require__(230);
+var _Header = __webpack_require__(229);
 
 var _Header2 = _interopRequireDefault(_Header);
 
@@ -25875,7 +25792,7 @@ var Layout = function (_Component) {
 exports.default = Layout;
 
 /***/ }),
-/* 230 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25985,13 +25902,13 @@ var Header = function (_Component) {
 exports.default = Header;
 
 /***/ }),
-/* 231 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-window._ = __webpack_require__(232);
+window._ = __webpack_require__(231);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -26000,13 +25917,13 @@ window._ = __webpack_require__(232);
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(235);
+  window.$ = window.jQuery = __webpack_require__(234);
 
-  __webpack_require__(236);
+  __webpack_require__(235);
 } catch (e) {}
 
 /***/ }),
-/* 232 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -43095,10 +43012,10 @@ try {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(233), __webpack_require__(234)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(232), __webpack_require__(233)(module)))
 
 /***/ }),
-/* 233 */
+/* 232 */
 /***/ (function(module, exports) {
 
 var g;
@@ -43125,7 +43042,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 234 */
+/* 233 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -43153,7 +43070,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 235 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -53413,7 +53330,7 @@ return jQuery;
 
 
 /***/ }),
-/* 236 */
+/* 235 */
 /***/ (function(module, exports) {
 
 /*!
@@ -55796,7 +55713,7 @@ if (typeof jQuery === 'undefined') {
 
 
 /***/ }),
-/* 237 */
+/* 236 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

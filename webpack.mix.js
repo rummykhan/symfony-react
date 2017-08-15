@@ -2,6 +2,7 @@ const {mix, config} = require('laravel-mix');
 
 config.react = true;
 config.publicPath = 'web';
+config.hmr = false;
 
 /*
  |--------------------------------------------------------------------------
