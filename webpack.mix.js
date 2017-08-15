@@ -1,4 +1,7 @@
-let mix = require('laravel-mix');
+const {mix, config} = require('laravel-mix');
+
+config.react = true;
+config.publicPath = 'web';
 
 /*
  |--------------------------------------------------------------------------
